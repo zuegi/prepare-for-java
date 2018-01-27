@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/best-dev.iml" filepath="$PROJECT_DIR$/best-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects.iml" group="createAndDestroyObjects" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_main.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_main.iml" group="createAndDestroyObjects" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_test.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_test.iml" group="createAndDestroyObjects" />
+    </modules>
+  </component>
+</project>
