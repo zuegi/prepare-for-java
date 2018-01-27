@@ -1,5 +1,5 @@
-Setup Project best-dev
-=====================
+Setup Project preparation-for-java
+==================================
 
 Soll ein Multi-Module Project in gradle werden.
 Und auf einem git repository abgelegt werden, wie z.B. github, gitlab oder bitbucket
@@ -70,7 +70,13 @@ Die Build Artefkate des Moduls createAndDestroyObjects sind unter folgendem Pfad
 
 
 5. Einlagern in eine git Repository
-https://guides.github.com/activities/hello-world/
+    https://guides.github.com/activities/hello-world/
+Git Repository auf github.com angelegt unter zuegi
+
+
+6. OK, dann bin ich wohl ready für weitere Projekte
+
+
 
 
 
