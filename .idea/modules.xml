@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects.iml" group="createAndDestroyObjects" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_main.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_main.iml" group="createAndDestroyObjects" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_test.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_test.iml" group="createAndDestroyObjects" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shortandsweet.iml" filepath="$PROJECT_DIR$/.idea/modules/shortandsweet.iml" />
     </modules>
   </component>
 </project>
