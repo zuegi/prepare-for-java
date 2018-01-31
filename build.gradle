@@ -29,3 +29,12 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 */
+
+repositories {
+//    mavenCentral()
+    mavenLocal()
+    maven {
+        url "http://rchrepository:8080/nexus/content/groups/SEU_JAVA_PROD"
+    }
+}
+

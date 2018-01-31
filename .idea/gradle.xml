@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/createAndDestroyObjects" />
+            <option value="$PROJECT_DIR$/shortandsweet" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

@@ -1,4 +1,4 @@
-package ch.wesr.oca.javawissen;
+package ch.wesr.prepareforjava.javawissen;
 
 import java.io.File;
 
