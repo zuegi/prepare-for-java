@@ -1,4 +1,4 @@
-package ch.wesr.prepareforjava.buildingBlocks;
+package ch.wesr.prepareforjava.buildingBlocks.klassen;
 
 class Animal {
 
