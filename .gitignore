@@ -1,4 +1,16 @@
-*.iml
+### Gradle settings ###
 .gradle
-/.idea/workspace.xml
-/.idea/libraries
+out/
+build/
+
+### Intellij ###
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/libraries
+
+### trustores ###
+*.p12
+
+### other stuff ###
+.DS_Store

@@ -2,6 +2,7 @@ package ch.wesr.prepareforjava.javawissen;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.cert.CertificateExpiredException;
@@ -12,31 +13,21 @@ import java.util.Objects;
 import javax.security.auth.x500.X500Principal;
 
 public class Pkcs12Util {
-    private File certificate;
     private String password;
     private KeyStore keyStore;
 
-    public Pkcs12Util(String certPath, String password) {
-        this(new File(certPath), password);
-    }
 
-    public Pkcs12Util(File certificate, String password) {
-        Objects.nonNull(certificate);
+    public Pkcs12Util(InputStream storeInputStream, String password) {
         Objects.nonNull(password);
-
-        this.certificate = certificate;
-        this.password = password;
-        init();
-    }
-
-    private void init() {
         try {
-            keyStore = KeyStore.getInstance("pkcs12");
-            keyStore.load(new FileInputStream(certificate), password.toCharArray());
+            keyStore = KeyStore.getInstance("PKCS12");
+            keyStore.load(storeInputStream, password.toCharArray());
         } catch (Exception e) {
             e.printStackTrace();
         }
+        this.password = password;
     }
+
 
     /**
      * @return true if the certificate is valid, false if certificate expired.
