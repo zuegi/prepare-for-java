@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="buildingBlocks_main" target="1.8" />
+      <module name="buildingBlocks_test" target="1.8" />
       <module name="createAndDestroyObjects_main" target="1.8" />
       <module name="createAndDestroyObjects_test" target="1.8" />
       <module name="shortandsweet_main" target="1.8" />

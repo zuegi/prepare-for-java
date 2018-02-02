@@ -57,4 +57,4 @@ Gradle build from the root of the project
  
  
  # Markdown
- https://guides.github.com/features/mastering-markdown/
+[Markdown] (https://guides.github.com/features/mastering-markdown/)

@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/best-dev.iml" filepath="$PROJECT_DIR$/best-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildingBlocks.iml" filepath="$PROJECT_DIR$/.idea/modules/buildingBlocks.iml" group="buildingBlocks" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildingBlocks/buildingBlocks_main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildingBlocks/buildingBlocks_main.iml" group="buildingBlocks" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildingBlocks/buildingBlocks_test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildingBlocks/buildingBlocks_test.iml" group="buildingBlocks" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects.iml" group="createAndDestroyObjects" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_main.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_main.iml" group="createAndDestroyObjects" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_test.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_test.iml" group="createAndDestroyObjects" />

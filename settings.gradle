@@ -18,3 +18,5 @@ include 'services:webservice'
 rootProject.name = 'best-dev'
 include 'createAndDestroyObjects'
 include 'shortandsweet'
+include 'buildingBlocks'
+
