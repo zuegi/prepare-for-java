@@ -61,9 +61,9 @@ Die main() Signatur
     --
     public      access modifier
     static      bindet eine Methode an die Klasse, der Aufruf kann mit Klasse.main() erfolgen.
-    void        representiert den Return Type, es ist eine gute Praxis Methoden als void zu deklairen
+    void        representiert den Return Type, es ist eine gute Praxis Methoden als void zu deklarieren
                 welche den Objekt Status verändern. Die main() Methode verändert den Status des Programms
-                deshalb wird sie als void deklariert. 
+                deshalb wird sie mit void versehen. 
     
     
     
