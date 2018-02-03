@@ -71,6 +71,7 @@ Die Parameter Liste der main() Methode -> String[] args
 
 Folgende Kombinationen sind möglich als Parameter Liste zu übergeben und repräsentieren einen Array.
 
+    ```java
     public static void main(String[] args) {}
     public static void main(String args[]) {}
     public static void main(String..args) {}
