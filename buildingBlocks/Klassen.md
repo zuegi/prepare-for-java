@@ -76,6 +76,7 @@ Folgende Kombinationen sind möglich als Parameter Liste zu übergeben und repr�
     public static void main(String args[]) {}
     public static void main(String..args) {}
     
+    
 Werden zu wenige Argumente übergeben so resultiert das in einer ArrayIndexOutOfBoundsException
 
     public class Animal4() {
