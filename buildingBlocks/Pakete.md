@@ -75,14 +75,17 @@ Aber vorsicht, folgender Code compiliert nicht
     import java.util.*;
     import java.sql.*;      // does not compile
     
-    error: reference to Date is ambiguous
+ mit folgender Fehlermeldung
+ 
+    Error:(7, 5) java: reference to Date is ambiguous
+        both class java.sql.Date in java.sql and class java.util.Date in java.util match
     
     
 mit folgendem Import lösen wir das Problem, und wir verwenden die java.util.Date Klasse.
 
     import java.util.Date;
     import java.sql.*;
-    
+       
     public class DateKonflikt {
         Date date;
     }
@@ -115,4 +118,48 @@ Ohne import Angaben dafür direkt die Klassenangabe. Oder
     }
 
 Mit Date als Default Datum und java.sql.Date ohne import Statemen, dafür im Code direkt verwendet.
+
+## Eigene Pakete erstellen
+Jede Zeile Code, die bis jetzt geschrieben wurde, wurde im _default package_ erstellt.
+Das ist eine spezielles, unbenanntes Paket und soll nur für Wegwerf- und Beispiel Code verwendet
+werden.
+
+
+Für neue Pakete ist die Verzeichnis Struktur auf dem Computer verbunden mit den Paketnamen.
+
+Angenommen wir haben diese beiden Klassen
+/tmp/packagea/ClassA.java
+
+    package package;
+    public class ClassA {
+    }
+    
+und /tmp/packageb/ClassB.java
+
+    package packageb;
+    import packagea.ClassA;
+    public class ClassB {
+        public static void main(String[] args) {
+            ClassA a;
+            System.out.println("Got it");
+        }
+    }
+            
+            
+Kompilieren wir aus dem Verzeichnis /tmp mit folgenden Aufrufen
+
+    $ javac packagea/ClassA packageb/ClassB
+    
+Wenn alles erfolgreich kompliert ist so kann folgender Aufruf gemacht werden:
+
+    $ java packagea.ClassA
+    
+
+
+Und obwohl wir im /tmp keine komplierten Klassen liegen haben, findet java die 
+entsprechenden Klassen und führt aus:
+
+    $ java packagea.ClassA
+    Got it
+    
 
