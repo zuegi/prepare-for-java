@@ -1,8 +1,6 @@
-package ch.wesr.prepareforjava.buildingBlocks.packete;
+package ch.wesr.prepareforjava.buildingBlocks.pakete;
 
 import java.util.Random;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class ImportBeispiel {
 

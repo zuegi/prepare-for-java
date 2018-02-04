@@ -1,4 +1,4 @@
-package ch.wesr.prepareforjava.buildingBlocks.packete;
+package ch.wesr.prepareforjava.buildingBlocks.pakete;
 
 
 public class VerwendungVon2Dates2 {

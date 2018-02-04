@@ -162,4 +162,60 @@ entsprechenden Klassen und führt aus:
     $ java packagea.ClassA
     Got it
     
+    
+**ACHTUNG!!**
+
+Wenn wir mit einer IDE arbeiten, so nimmt diese Idee uns viele Arbeiten ab - leider
+überlegen wir uns dann auch nicht mehr so viel und nehmen vieles für selbstverständlich hin.
+
+So rufen wir die obigen Zeilen mit Paketen, wie sie unterhalb des src Verzeichnis vorzufinden sind,
+folgendermassen ab.
+
+     $ pwd
+    <pfad-zum-Verzeichnis>/prepare-for-java/buildingBlocks/src/main/java
+    
+Ab dem Verzeichnis java beginnt die Verzeichnistruktur ch/wesr/prepareforjava/...
+
+Kompilieren
+
+    $ javac ch/wesr/prepareforjava/buildingBlocks/pakete/ClassA.java ch/wesr/prepareforjava/buildingBlocks/pakete/b/ClassB.java  
+   
+Ausführen
+
+    $ java ch.wesr.prepareforjava.buildingBlocks.packete.ClassA
+    Got it
+
+
+
+
+## Code Formatierung für das OCA Examen
+Für das Examen werden die Import oft nicht gefragt und aus Platzgründen weggelassen.
+In den Code Beispielen des Examen sind die Zeilen immer mit Nummern versehen und sehen
+dann oftmals so aus:
+
+    6:  public void method(ArrayList list) {
+    7:      if(list.isEmpty()){
+    8:          System.out.println("it is empty");
+    9:      } else {
+    10:         System.out.println("it is not empty");
+    11:     }
+    12: }
+    
+Solch ein Code Beispiel heisst dann, keine Panik, die import sind korrekt - konzentriere dich
+auf die Zeilen 6 - 12.
+
+**Aufgepasst** wenn das Code Beispiel mit der Zeile 1 beginnt:
+
+    1:  public class LineNumbers {
+    2:      public void method(ArrayList list) {
+    3:      if(list.isEmpty()){
+    4:          System.out.println("it is empty");
+    5:      } else {
+    6:         System.out.println("it is not empty");
+    7:     }
+    8: }
+    
+Obiger Code **kompiliert nicht**, weil der Code mit der Zeile 1 beginnt und hier 
+die Import Statements für das ArrayList (java.util) fehlt.
+
 

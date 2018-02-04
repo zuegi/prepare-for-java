@@ -1,7 +1,4 @@
-package ch.wesr.prepareforjava.buildingBlocks.packete;
-
-import java.util.*;
-import java.sql.*;
+package ch.wesr.prepareforjava.buildingBlocks.pakete;
 
 public class Konflikte {
     // Date date; // wird nicht komplieren

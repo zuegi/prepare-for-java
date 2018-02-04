@@ -1,6 +1,6 @@
-package ch.wesr.prepareforjava.buildingBlocks.packete;
+package ch.wesr.prepareforjava.buildingBlocks.pakete;
 
-import ch.wesr.prepareforjava.buildingBlocks.packete.b.ClassB;
+import ch.wesr.prepareforjava.buildingBlocks.pakete.b.ClassB;
 
 public class ClassA {
 
