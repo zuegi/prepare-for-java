@@ -1,7 +1,5 @@
 package ch.wesr.prepareforjava.buildingBlocks.objekte;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 public class CodeBlocks {
 
     public static void main(String[] args) {

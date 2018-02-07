@@ -7,28 +7,27 @@ import java.io.InputStream;
 public class ReadPkcsFile {
 
     public static void main(String[] args) throws Exception {
+        System.out.println("####################### KeyStore ##########################");
 
-        //D:/WS/NEM-OS_3000/gitrepo/NEMOS3000.Web.SRC/NEMOS3000/NEMOS3000Config/5-acceptancetest/config/certificates
         ReadPkcsFile readPkcsFile = new ReadPkcsFile();
-        InputStream resourceAsStream = readPkcsFile.getClass().getResourceAsStream("/WebserviceClientTruststore.p12");
-//        InputStream resourceAsStream = readPkcsFile.getClass().getResourceAsStream("/WebserviceClientKeystore.p12");
+        InputStream resourceAsStream = readPkcsFile.getClass().getResourceAsStream("/clientTrustStore.jks");
 
-//        FileInputStream fis = new FileInputStream(new File("D:/WS/NEM-OS_3000/gitrepo/NEMOS3000.Web.SRC/NEMOS3000/NEMOS3000Config/5-acceptancetest/config/certificates/WebserviceClientTruststore.p12"));
-
-        Pkcs12Util util = new Pkcs12Util(resourceAsStream, "nemos3000");
+        Pkcs12Util util = new Pkcs12Util(resourceAsStream, "to_be_set");
 
         System.out.println("Is certificate valid : " + util.isValidCert());
         System.out.println("Issuer details : " + util.getIssuerName());
+        System.out.println("Aliases: ");
         util.printAliases();
-        System.out.println("Full details : " + util.getDetails());
 
 
-        /*
-        File file = new File("target/classes/WebserviceClientKeystore.p12");
-        Pkcs12Util util1 = new Pkcs12Util(file, "nemos3000");
+        System.out.println("####################### TrustStore ##########################");
+
+        ReadPkcsFile readJksTrustStore = new ReadPkcsFile();
+        InputStream resourceAsStream1 = readPkcsFile.getClass().getResourceAsStream("clientKeyStore.jks");
+        Pkcs12Util util1 = new Pkcs12Util(resourceAsStream1, "to_be_set");
         System.out.println("Is certificate valid : " + util1.isValidCert());
         System.out.println("Issuer details : " + util1.getIssuerName());
+        System.out.println("Aliases: ");
         util1.printAliases();
-        */
     }
 }

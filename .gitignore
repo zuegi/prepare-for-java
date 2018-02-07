@@ -1,5 +1,6 @@
 ### java ###
 *.class
+*.jks
 
 ### Gradle settings ###
 .gradle
