@@ -12,5 +12,19 @@ public class Primitives {
 //    double notByDecimalAfter = 1000._00;
 
     double notByDecimalAfter = 1_00_0.0_0;
+    String __$StillOkIdentifier;
+    String  Ωvalid;
+    String ßvalid;
+//    String ƒ∂å;       // kompliet nicht - å nicht erlaubt
 
+    public static void main(String[] args) {
+        System.out.println(kompiliertNicht());
+    }
+
+    public static int kompiliertNicht() {
+        int y = 10;
+        int x = 2;
+        int reply = x + y;
+        return reply;
+    }
 }

@@ -106,11 +106,127 @@ und A -F zählt 0-6, als F=6. Zusammen gibt das F = 9+6=15. Eine Stelle nach Lin
 und die zählt 1 x 16 und damit gibt es ein Total von 16 + 15 = 31.
 
  
+# Referenz Typen
+Eine Referenz Typ bezieht sich auf ein Objekt (eine Instanz einer Klasse). Eine Referenz Type 
+Variable enthält keinen eigentlichen Wert, sondern zeigt auf ein Objekt (und speichert die
+Adresse des Objektes). Dieses Konzept nennt sich Pointer. Java erlaubt uns dabei nicht, 
+die physikalische Adresse zu lernen, sondern behält diese für sich.
 
- 
 
-
-
-
+    java.util.Date heute;
     
+    heute = new java.util.Date();
+    
+Die heute Variable ist eine Referenz vom Typ Date und kann ausschliesslich auf ein Date Objekt
+zeigen. Mit dem erzeugen eines new Date() Objektes kann über die heute Variable auf 
+die verschiedenen Felder und Methoden von Date zugreifen.
+heute kann man auch auf ein neues Date Objekt zeigen lassen.
+
+    java.util.Date heute;
+    heute = new java.util.Date();
+    
+    heute = new java.util.Date();
+    
+## Unterschiede zwischen primitiven Typen und Referenz Typen
+* Null Werte
+Referenz Typ Variablen können null Werte zugewiesen werden, wo hingegen bei
+primitiven Typen keine null Werte hinzugefügt werden.
+
+    int value = null;       // kompiliert nicht
+    String s = null;        // ok
+ 
+* Methoden Aufrufe
+Referenz Typ Variablen können Methoden aufrufen wenn sie nucht auf einen null Wert zeigen.
+Primitive Typ Variablen haben nur Werte zugewiesen und können keine Methoden zugewiesen haben.
+
+    String reference = "hallo";
+    int len = reference.length();
+    int bad = len.lengt();      // kompiliert nicht
+    
+
+## Deklarieren und Initialisieren von Variablen
+
+    String zooName;
+    int anzahlTiere;
+    
+    zooName = "Walter Zoo";
+    anzahlTiere = 456;
+    
+    
+oder direkt
+    
+    String zooName = "Walter Zoo";
+    anzahlTiere = 456;
+    
+Mehrere Variablen auf einer Zeile deklarieren ist möglich.
+
+    String s1, s2;
+    String s3 = "yes", s4 = "no";
+    int i1, i2, i3 = 3;     // nur i3 wurde auch initialisiert mit 3
+    
+    int zahl, String wert;  // kompiliert nicht
+   
+Weitere Beispiele
+
+    1: boolean b1, b2;
+    2: String s1 = "1", s2;
+    3: double d1, double d2;   // kompiliert nicht, mehr als ein Typ pro Zeile 
+    4: int i; int i2;          // ok, ; beendet eine Statement - kann aber auf derselben Zeile stehen
+    5: int i3; i4;             // kompliert nicht
+
+Zeile 3 kompiliert nicht, weil Java keine 2 Typen auf einer Zeile ohne Statement Abschluss (;) zulässt.
+Zeile 4 kompiliert, weil nach jeder Deklaration, das Statement mit einer Zeile abgeschlossen werden
+
+## Identifiers
+Java hat präzise Regeln wie Identifier benannt werden dürfen.
+3 Regeln dazu
+
+* Der Name muss mit einem **Buchstaben**, einem **$** Symbol oder einem **_** beginnen.
+* Nachfolgende Zeichen dürfen auch zahlen sein
+* Es dürfen keine reservierte Wörter aus Java verwendet werden.
+
+    okidentifier
+    $OK2Identifiert
+    _alsoOkIdentfiert
+    __$StillOkIdentifier
+
+nicht ok
+
+    3DPointer           // darf nicht mit einer Zahl beginnen
+    holliywood@vine     // @ in einer Variable nicht erlaubt
+    *$coffee            // * nicht erlaubt
+    public              // ist ein reserviertes Wort
+    Ωvalid;
+    String ßvalid;
+    String ƒ∂å;         // nicht valid - å nicht erlaubt
+    
+Java erlaubt unicdoe charakter set und damit gibt es über 45'000 mögliche Zeichen für 
+einen Variablen Namen zu benennen.
+
+## Intialisierung von Variablen
+### Lokale Variablen
+Eine lokale Variable wird innerhalb einer Methode definiert und muss vor dem Verwenden initalisiert werden.
+Sie haben keinen Default Wert und der Kompiler schmeisst einen Fehler beim Missachten dieser Regel
+    
+    public int kompiliertNicht() {
+        int y = 10;
+        int x;              // x ist nicht initialsiert
+        int reply = x + y;
+        return reply; 
+    }
+    
+das funktioniert hingegen
+    
+    public int kompiliert() {
+        int y = 10;
+        int x;                  // x wird deklariert
+        x = 3;                  // x wird initialsiert vor dem Verwenden
+        int reply = x + y;      // x wird hier verwendet
+        return reply; 
+    }
+    
+    
+
+## Instanz und Klassen Variablen
+
 
