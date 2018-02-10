@@ -19,8 +19,9 @@ public class Pkcs12Util {
 
     public Pkcs12Util(InputStream storeInputStream, String password) {
         Objects.nonNull(password);
+        keyStore = null;
         try {
-            keyStore = KeyStore.getInstance("PKCS12");
+            keyStore = KeyStore.getInstance("JKS");
             keyStore.load(storeInputStream, password.toCharArray());
         } catch (Exception e) {
             e.printStackTrace();
