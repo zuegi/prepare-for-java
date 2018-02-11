@@ -1,6 +1,9 @@
 # prepare-for-java
 My preparations to learn Java and the associated certifications
 
+## Building Blocks
+[Building Blocks](./buildingBlocks/BuildingBlocks.md)
+
 
 Create this project from scratch
 ==========================================
