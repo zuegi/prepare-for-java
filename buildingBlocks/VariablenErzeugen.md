@@ -39,6 +39,7 @@ Java hat präzise Regeln wie Identifier benannt werden dürfen.
 * Nachfolgende Zeichen dürfen auch zahlen sein
 * Es dürfen keine reservierte Wörter aus Java verwendet werden.
 
+
     okidentifier
     $OK2Identifiert
     _alsoOkIdentfiert
@@ -54,7 +55,7 @@ nicht ok
     String ßvalid;
     String ƒ∂å;         // nicht valid - å nicht erlaubt
     
-Java erlaubt unicdoe charakter set und damit gibt es über 45'000 mögliche Zeichen für 
+Java erlaubt **Unicode charakter set** und damit gibt es über 45'000 mögliche Zeichen für 
 einen Variablen Namen zu benennen.
 
 ## Intialisierung von Variablen
@@ -82,7 +83,7 @@ das funktioniert hingegen
     
 
 ## Instanz und Klassen Variablen
-Eine Variable wird als Klassen Variable bezeichnet, wenn das Schlüsselwort **static** zur Deklarierung
+Eine Variable wird als **Klassen Variable** bezeichnet, wenn das Schlüsselwort **static** zur Deklarierung
 vewendet wird. Instanz und Klassen Variablen erfordern nicht, dass sie initalisiert werden.
 Sobald diese Variablen deklariert werden, vekommen sie default Werte zugeordnet
 

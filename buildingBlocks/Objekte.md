@@ -13,8 +13,9 @@ Random() schaut auf den ersten Blick wie eine Methode aus. Es ist aber ein Konst
 eine spezielle Art einer Methode, welche ein Objet erzeugt.
 
 **Regeln für einen Konstruktor in Java**
-* Der Konstruktur heisst immer so wie die Klasse.
-* Der Konstruktor hat keinen Return Type ( auch **keine void** Deklaration)
+* Der Konstruktur **heisst immer** so **wie die Klasse**.
+* Der Konstruktor hat **keinen Return Type** 
+* Der Konstruktor hat auch **keine void** Deklaration, da ja kein Return Type.
 
 
     public class Chick(){
@@ -32,7 +33,7 @@ Für viele Klassen braucht es aber auch gar keinen Konstruktor, weil der Compile
 einen Default Konstruktor zur Verfügung stellt.
 
 ## Lesen und Schreiben 
-Es ist möglich Instanz Variablen direct aus der aufrufenden Klasse lesen und schreiben
+Es ist möglich Instanz Variablen direkt aus der aufrufenden Klasse lesen und schreiben
 zu können.
 
     public class Swan {
@@ -47,7 +48,7 @@ zu können.
         }
         
         
-Man kann sogar Felder lese und schreiben direkt nach dem deklarieren
+Man kann sogar Felder lesen und schreiben direkt nach dem deklarieren
 
     public class Name {
         static String first = "René";
@@ -77,7 +78,7 @@ wir auf die Reihenfolge der Initialiszierung aufpassen.
 Obwohl es noch mehr Regeln zu beachten gilt, nehmen wir 2 Regeln auf:
 
 **Regeln**
-* Felder und Instanz Initialisierer (was für ein Wort) Bocks werden in der Reihenfolge,
+* Felder und Instanz Initialisierer Bocks werden in der Reihenfolge,
 wie sie in der Klasse / File geschrieben werden berücksichtigt.
 * Der Konstruktor wird nachdem alle Felder und Instanz Initialisierer Blocks durchgelaufen
 sind aufgerufen.
@@ -86,26 +87,27 @@ Folgendes Beispiel soll das veranschaulichen
 
     public class Chick {
         
-        private String name = "Fluffy";
-        { System.out.println("setting field"); }
-        public Chick() {
-            name = "Tiny";
-            System.out.println("setting constructor");
+        private String name = "Fluffy";                 // 3. Feld Initialisierung
+        { System.out.println("setting field"); }        // 4. Instanz Initialisierungs-Block
+        
+        public Chick() {                                // 2. Aufruf, damit wird Objekt erzeugt
+            name = "Tiny";                              // 5. name wird Tiny zugewiesen
+            System.out.println("setting constructor");  // 6. setting constructor ausgegeben
         }
     
-        public static void main(String[] args) {
-            Chick chick = new Chick();
-            System.out.println(chick.name);
+        public static void main(String[] args) {        // 1. Aufruf
+            Chick chick = new Chick();                  // 2. Aufruf
+            System.out.println(chick.name);             // 7. print Feldvariable
         }
     }
     
-Zuerst wird die maim() Methode aufgerufen (da startet Java immer) und dann wird
-der Konstruktor Chick aufgerufen durch das new Chick() Statement.
-Damit wird das Objekt initalisiert und der Variablen name Fluffy zugewiesen. Danach
-wird das Statement setting field im Instanz Initialisierer geprintet.
-Wenn das alles gemacht ist, kehrt Java zum Konstruktor zurück, setzt Tiny in die name 
-Variable und printet setting constructor.
-Wieder in der main() wird die Variable chick.name angezeigt. Der Output sieht so aus:
+Zuerst wird die main() Methode (**1.**) aufgerufen (da startet Java immer) und dann wird
+der Konstruktor Chick (**2.**) aufgerufen durch das new Chick() Statement.
+Damit wird das Objekt initalisiert und der Variablen name Fluffy (**3.**) zugewiesen. Danach
+wird das Statement setting field im Instanz Initialisierer (**4.**) geprintet.
+Wenn das alles gemacht ist, kehrt Java zum Konstruktor zurück, setzt Tiny (**5.**) in die name 
+Variable und printet (**6.**) setting constructor.
+Wieder in der main() wird die Variable (**7.**) chick.name angezeigt. Der Output sieht so aus:
 
     setting field
     setting constructor
@@ -116,6 +118,7 @@ Die Reihenfolge spielt eine grosse Rolle, das z.b. funktioniert nicht
     { System.out.println(name); }       // kompiliert nicht
     private String name = "Fluffy";
     
+Regeln siehe auch [Erzeugen von Variablen](VariablenErzeugen.md)
 
 ## Zurück zu Building Blocks
 [Building Blocks](BuildingBlocks.md)    

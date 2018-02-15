@@ -1,13 +1,14 @@
 # Pakete
 
-Um die vielen Klassen zu oraganisiern platziert Java Klassen in Paketen (packages).
+Um die vielen Klassen zu organisieren platziert Java Klassen in Paketen (packages).
 
-Java Packages sind hierarchisch organisiert. Wenn die paketnamen mit **java** starten 
+Java Packages sind hierarchisch organisiert. Wenn die Paketnamen mit **java** starten 
 so sind sie Teil des JDK oder JRE. Wenn sie mit einem anderen Namen starten, verraten sie
 uns woher sie kommen, z.B.
 
     com.amazon.java8book
-Die Regel für package Namen sind dieselben wie für Variablen Namen. 
+    
+Die Regel für Package Namen sind dieselben wie für Variablen Namen. 
 Meistens bestehen sie aus Buchstaben und Nummern verbunden über Punkte.
 
 
@@ -20,13 +21,13 @@ Der Asteriks * ist das Wildcard Zeichen.
 Obige Zeile import java.util.Random und einige andere Klassen. Es werden aber nur
 Klassen geladen. Child packages, fields oder Methoden werden **nicht** geladen.
 
-Imports über Wildcards zu regeln führt zu kürzeren und übersichtlichen Importlisten,
-kann aber auch Verwirrung über was den nun genau Importiert wurde führen.
+Imports über Wildcards zu regeln, führt zu kürzeren und übersichtlichen Importlisten,
+kann aber auch Verwirrung, über was den nun genau Importiert wurde, führen.
 
 ## Redundante Importe
 Es gibt ein spezielles Package in der Java Welt
 
-    java.lang
+    java.lang.*;
     
 Es wird in jedem Programm automatisch importiert und muss nicht explizit angegeben werden.
 Darum funktioniert auch der
@@ -93,13 +94,16 @@ mit folgendem Import lösen wir das Problem, und wir verwenden die java.util.Dat
 Was aber, wenn wir beide Klassen explizit brauchen?
 
     import java.util.Date;
-    import java.util.Date;
+    import java.sql.Date;
     
     public class ZweiDate {
-        Date javaDate;
+        Date javaDate;          // kompiliert nicht
     }
     
-In diesem Beispiel wird das java.util.Date verwendet.
+    error: a type with the same simple name is already defined by the single-type-import of Date
+    import java.sql.Date;
+
+    
 
 Brauchen wir wirklich einmal die beiden unterschiedlichen Date, so können wir uns so behelfen.
 
@@ -117,7 +121,7 @@ Ohne import Angaben dafür direkt die Klassenangabe. Oder
         java.sql.Date sqlDate;
     }
 
-Mit Date als Default Datum und java.sql.Date ohne import Statemen, dafür im Code direkt verwendet.
+Mit Date als Default Datum und java.sql.Date ohne import Statement, dafür im Code direkt verwendet.
 
 ## Eigene Pakete erstellen
 Jede Zeile Code, die bis jetzt geschrieben wurde, wurde im _default package_ erstellt.
@@ -130,14 +134,16 @@ Für neue Pakete ist die Verzeichnis Struktur auf dem Computer verbunden mit den
 Angenommen wir haben diese beiden Klassen
 /tmp/packagea/ClassA.java
 
-    package package;
+    package packageA;
     public class ClassA {
     }
     
 und /tmp/packageb/ClassB.java
 
     package packageb;
+    
     import packagea.ClassA;
+    
     public class ClassB {
         public static void main(String[] args) {
             ClassA a;
@@ -156,7 +162,7 @@ Wenn alles erfolgreich kompliert ist so kann folgender Aufruf gemacht werden:
     
 
 
-Und obwohl wir im /tmp keine komplierten Klassen liegen haben, findet java die 
+Und obwohl wir im /tmp keine kompilierten Klassen liegen haben, findet java die 
 entsprechenden Klassen und führt aus:
 
     $ java packagea.ClassA
@@ -201,7 +207,7 @@ dann oftmals so aus:
     11:     }
     12: }
     
-Solch ein Code Beispiel heisst dann, keine Panik, die import sind korrekt - konzentriere dich
+Solch ein Code Beispiel heisst dann, keine Panik, die Importe sind korrekt - konzentriere dich
 auf die Zeilen 6 - 12.
 
 **Aufgepasst** wenn das Code Beispiel mit der Zeile 1 beginnt:
@@ -216,7 +222,7 @@ auf die Zeilen 6 - 12.
     8: }
     
 Obiger Code **kompiliert nicht**, weil der Code mit der Zeile 1 beginnt und hier 
-die Import Statements für das ArrayList (java.util) fehlt.
+die Import Statements für das ArrayList (java.util) fehlen.
 
 
 ## Zurück zu Building Blocks

@@ -28,7 +28,7 @@ ein Bit hat 2 mögliche Werte (0 oder 1).
     2ˆ8 = 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2
         =   4   8   16  32  64  128 256 
         
-Die 0 wrid ebenfalls einbezogen und diese Werte Java als positive Zahl und sog geht
+Die 0 wird ebenfalls einbezogen und diese wertet Java als positive Zahl und so geht
 der Zahlenrange von -128 bis 127.
 Die Anzahl der bits verwendet Java für das Allozieren von Memory einer Variablen. Schreibt man
 
@@ -71,14 +71,14 @@ vor und nach einem . (Dezimalpunkt). Beispiele
 Eine andere Möglichkeit die Zahlen zu definieren ist das Basis System. Die Zahlen 0-9 sind
 das Dezimal-System mit welchem wir rechnen. Es gibt aber noch weitere Formate
 
-    Basis-System                Prefix          Beispiel
-    ============                ======          ========
-    octal ( 0 -7)               0               017
-    hexadecimal(0-9 und A-F)    0x,0X           0xFF oder 0XFF
-    binary (0-1)                0b,0B           0b10 oder 0B10
+Basis-System | Prefix | Beispiel
+------------ |------- |---------
+octal ( 0 -7) | 0 | 017
+hexadecimal(0-9 und A-F) | 0x,0X | 0xFF oder 0XFF
+binary (0-1) | 0b,0B | 0b10 oder 0B10
     
 
-Auch wenn das für das Examen nicht relevant ist, hier ein paar Beipsiel zum Rechnen
+Auch wenn das für das Examen nicht relevant ist, hier ein paar Beispiele zum Rechnen
 
     System.out.println(56);         // 56       Base 10
     System.out.println(0b11);       // 3        Base 2
@@ -128,14 +128,14 @@ heute kann man auch auf ein neues Date Objekt zeigen lassen.
     heute = new java.util.Date();
     
 ## Unterschiede zwischen primitiven Typen und Referenz Typen
-* Null Werte
-Referenz Typ Variablen können null Werte zugewiesen werden, wo hingegen bei
-primitiven Typen keine null Werte hinzugefügt werden.
+### Null Werte
+**Referenz Typ** Variablen **können null** Werte zugewiesen werden, wo hingegen bei
+**primitiven Typen** **keine null** Werte hinzugefügt werden.
 
-    int value = null;       // kompiliert nicht
-    String s = null;        // ok
+   int value = null;       // kompiliert nicht
+   String s = null;        // ok
  
-* Methoden Aufrufe
+### Methoden Aufrufe
 Referenz Typ Variablen können Methoden aufrufen wenn sie nucht auf einen null Wert zeigen.
 Primitive Typ Variablen haben nur Werte zugewiesen und können keine Methoden zugewiesen haben.
 
