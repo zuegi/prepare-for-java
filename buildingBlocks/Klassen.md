@@ -53,7 +53,7 @@ so benannt werden.
 
 # Main Methode
 Die main() Methode ist das Tor zwischen dem Startup des Java Prozesses und dem Beginn des Codes.
-Jeder legale Java Code kann in eine maint() Methode geschrieben werden.
+Jeder legale Java Code kann in eine main() Methode geschrieben werden.
 
 Die main() Signatur 
 
@@ -93,3 +93,7 @@ Werden zu wenige Argumente übergeben so resultiert das in einer ArrayIndexOutOf
     	at ch.wesr.prepareforjava.buildingBlocks.klassen.Animal4.main(Animal4.java:7)
 
 **Zuviele** Argument werden aber einfach **ignoriert**!
+
+
+## Zurück zu Building Blocks
+[Building Blocks](BuildingBlocks.md)
