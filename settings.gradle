@@ -19,4 +19,5 @@ rootProject.name = 'best-dev'
 include 'createAndDestroyObjects'
 include 'shortandsweet'
 include 'buildingBlocks'
+include 'operators'
 
