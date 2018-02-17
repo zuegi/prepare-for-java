@@ -35,5 +35,6 @@ Opertionen an Variablend, das Erstellen von logischen Ausdrücken als auch grund
 Zuweisungen verwendet werden. Sie werden oftmals in komplexen Ausdrücken mit mehr als 2 Variablen verwendet.
 Daher ist die Reihenfolge sehr wichtig bei der Auswertung.
 
+Ein Unärer Operator erforder genau einen Operanden.
 
  

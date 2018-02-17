@@ -4,6 +4,14 @@ Half in english, half in german
 
 ## Inhaltsverzeichnis
 * [Building Blocks](buildingBlocks/BuildingBlocks.md)
+  * [Klassen](Klassen.md)
+  * [Kommentare](Kommentar.md)
+  * [Objekte](Objekte.md)
+  * [Pakete](Pakete.md)
+  * [Objekt Referenzen und Primitive Typen](ObjektRefUndPrimitive.md)
+  * [Erzeugen von Variablen](VariablenErzeugen.md)
+  * [Vorteile von Java](VorteileVonJava.md)
+
 * [Operators and Statements](operators/OperatorsAndStatements.md)
 
 
