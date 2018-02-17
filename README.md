@@ -1,8 +1,10 @@
 # prepare-for-java
 My preparations to learn Java and the associated certifications
+Half in english, half in german
 
-## Building Blocks
-[Building Blocks](./buildingBlocks/BuildingBlocks.md)
+## Inhaltsverzeichnis
+* [Building Blocks](buildingBlocks/BuildingBlocks.md)
+* [Operators and Statements](operators/OperatorsAndStatements.md)
 
 
 Create this project from scratch
