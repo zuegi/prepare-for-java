@@ -137,11 +137,106 @@ Hier sind einige Regeln
 Daraus lässt sich eine Tabell ableiten
 
 ### x & y
- - | y = true | y = false
--- | -------- | ---------
+ o | y = true | y = false
+---| -------- | ---------
 x = true | true | false
 x = false | false | true
 
+### x | or
+o | y = true | y = false
+---| -------- | ---------
+x = true | true | true
+x = false | true | false
+
+### x ^ or
+o | y = true | y = false
+---| -------- | ---------
+x = true | false | true
+x = false | true | false
+
+### Die bedingten Operator
+**&&**, und **||** werden als _conditional operators_ bezeichnet (oder als short-circuit operator).
+Die beiden Operatoren sind ziemlich ähnlich den _&_ und _|_ - allerdings mit einem Unterschied.
+
+    boolean x = true || (y > 4);
+    
+Die rechte Expression (y > 4) muss nicht ausgewertet werden, wenn die linke Seite (true) der Expression,
+schon true ist. Oder anders ausgedrückt, _x_ kann nur false sein, wenn beide Operanden false sind.
+
+    if( x != null && x.getValue() < 5) {
+        // Mach etwas
+    }
+
+In obigem Beispiel wird x auf der rechten Seite nur ausgewertet, wenn es nicht einen null Wert besitzt,
+und das schützt vor einer NullPointerException.
+
+Anders das Beispiel
+
+    if( x != null & x.getValue() < 5) { // Wirft eine Exception wenn x null ist.
+            // Mach etwas
+        }
+
+hier werden beide Seiten des Operators ausgewertet und wenn x null ist, dann gibt es eine
+NullPointerException.
+
+Im Examen werden oftmals solche Fragen gestellt: Was ist der Wert von X?
+
+    int x = 6;
+    boolean y = (x >= 6) || (x++ <= 7);
+    System.out.println(x);
+    
+    
+Resultat **6**. weil x >= 6 true ist, wird die rechte Seite des Operators nie ausgewertet.
+
+### Der Equality Operator
+In Java unterscheidet man eine semantische Differenz zwischen **2 Objekte sind gleich** und
+**2 Objekte sind gleichwertig**. Und es ist noch komplizierter, weil man bei den primitiven und
+boolean Typen diese Unterscheidung nicht machen kann.
+
+Die beiden Operatoren **==** und **!=** vergleichen 2 Operanden und bringen als Resultat ein boolean
+zurück. Der **==** Operator wird in 3 Szenarien verwendet:
+
+* Vergleichen von nummerischen Werten
+
+
+    int x = 5;
+    double y = 5.00;
+    
+    if( x == y ) {          // korrekt, x wird in ein double befördert (promoted)
+        // Mach etwas
+     } 
+     
+* Vergleichen von boolean Werten
+
+
+    boolean x = true;
+    boolean y = false;
+    
+    if(x == y ) {
+        // Mach etwas
+     }
+    
+    
+* Vergleichen von 2 Objekten, inklusive null und String Werte
+
+
+    Random r = null;
+    
+    if(r == null) {
+        System.out.println("hoho, r wurde noch nicht initalisiert und hat einen null Wert");
+    }
+    
+    
+siehe auch [Vergleiche.java](src/main/java/ch/wesr/prepareforjava/operators/Vergleiche.java)
+
+Aber Vorsicht bei Referenzen:
+
+    File x = new File("meinText.txt");
+    File y = new File("meinText.txt");
+    File z = y;
+    System.out.println( x == y);    // false
+    System.out.println(y == z);     // true 
+ 
 
 
 ## Zurück zu Operators and Statements
