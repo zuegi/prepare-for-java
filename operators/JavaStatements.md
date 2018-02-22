@@ -168,7 +168,6 @@ Diese while endet niemals - erkenne warum.
 
 ## do-while Statement
 
-ls
 
 ## for statement
 
