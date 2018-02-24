@@ -168,12 +168,138 @@ Diese while endet niemals - erkenne warum.
 
 ## do-while Statement
 
+Anders als der while loop, wird beim do-while loop der Statement Block auf jedenfall einmal durchlaufen.
+
+    do {
+        // mach etwas
+    } while (booleanExpression);
+    
+Java führt den Statemen Block code zuerst aus und prüft dann die loop Bedingung.
+Der Unterschied zwischen dem while loop und do-while loop ist sehr klein.
+Java empfiehlt empfiehlt die while Schleife zu verwenden, wenn der Code Block nicht zwingend ausgeführt
+werden muss. Wo hingegen der do-while loop empfohlen wird, wenn der Code Block mindestens einmal durchlaufen
+werden muss.
 
 ## for statement
 
-## for-eacht statement
+    for(initialization; boooleanExpression1; updateStatement) {
+        // mach etwas
+    }
+    
+Es gibt verschiedene Arten von for loops, welche vor allem im Examen oftmals gefragt werden.
 
-##
+### Infinite loops
+
+    for (; ; ) {
+        System.out.print(new Date() + " Unendliche Schleife");
+    }
+    
+Obiges Statement kompiliert und läuft einwandfrei und das obwohl keine Komponenten deklariert sind.
+Die Komponenten sind optional, allerdings sind beide **Semikolons** **zwingend nötig**:
+
+    for() {}    // kompiliert nicht
+    
+    for(;) {}   // kompiliert nicht
+    
+### Mehrere Bedingungen hinzufügen (adding multiple terms)
+
+    int x = 0;
+    for(long y = 0, z = 4; x < 5 && y < 10; x++, y++) {
+        System.out.print(y +" ");
+    }
+    
+* Die Komponenten (initialization, booleanExpression, updateStatments) können zusätzliche Variablen deklarieren
+welche nicht mal unbedingt verwendet werden müssen (siehe **z**).
+* Variablen wie **x** können auch ausserhalb des for loops definiert werden und dann im loop verwendet werden.
+
+
+### Erneutes deklarieren eienr Variable im Initialisierungsblock
+
+    int x = 0;
+    for(long y = 0, x = 4; x < 5 && y > 10; x++, y++ ) {    // kompiliert nicht
+        System.out.println(x +" ");
+    }
+            
+    Error:(15, 25) java: variable x is already defined in method erneutesDeklarieren()
+
+**x** ist im obigen Beipsiel als int deklariert worden und will im Initialsierungsblock nochmals
+deklariert werden als Typ long -> das funktioniert nicht.
+
+### Verwenden von inompatiblen Datentypen im Initialisierungsblock
+
+    for(long y = 0, int x = 4; x < 5 && y < 10; x++, y++ ) {    // kompiliert nicht
+        System.out.print(x +" ");
+    }
+    
+Im Initialisierungsblock können nicht 2 verschiedene Datentypen (long und int)deklariert werden.
+
+### Das Verwenden von loop Variablen ausserhalb des loops
+
+    for(long y = 0, z = 4; x < 5 && y < 10; x++, y++) {
+        System.out.print(y +" ");
+    }
+    System.out.println(x +" ");     // kompiliert nicht
+    
+**x** wird innerhalb des Initialisierungsblock deklariert, aber ausserhalb mit dem 2. print Statement
+angesprochen.
+
+## for-each statement
+Seit Java 5 gibt es den erweiterten for loop, welcher speziell für die Iteration von Arrays und Collections gemacht wurde
+und als for-each loop bezeichnet wird.
+
+    for(datatype instance : collection) {
+        // mach etwas mit instance
+    }
+
+Die rechte Seite des for-each Statement muss eine built-in Java array oder aber eine Klasse, welche
+java.lang.Iterable implementiert (welche die meisten Klassen die von Collections ableiten implementieren)
+
+Einige Beispiele:
+
+    String[] names = {"Hans", "Paul", "Peter", "Kurt"};
+    for(String name : names) {
+        System.out.print(name +" ");
+    } 
+    
+    Hans Paul Peter Kurt 
+    
+was printed diese Loop?
+
+    String[] names = new String[3];
+    for(String name: names) {
+        System.out.print(name +" ");
+    }
+    
+    null null null 
+    
+Anders als im for loop sind im for-each loop die Komponenten notwendig.
+
+    for(:) {}       // kompiliert nicht
+    
+    Error:(17, 13) java: illegal start of expression
+
+Und Vorsicht: Solche Fallen stellen die Prüfungsexperten im Exame gerne
+
+    String[] names = new String[]
+    for(int name: names) {              // kompiliert nicht
+        System.out.print(name +" ");
+    }
+    
+
+
+### Der Unterschied zwischen for(:) und for(;;)
+
+    String[] names = {"Hans", "Paul", "Peter", "Kurt"};
+    
+    for(String name : names) {
+        System.out.print(name +" ");
+    }
+    
+    for(int i=0; i > names.length; i++) {
+        String name = names[i];
+        System.out.print(name +" "); 
+    }
+
 
 
 
