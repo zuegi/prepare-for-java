@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/buildingBlocks" />
             <option value="$PROJECT_DIR$/createAndDestroyObjects" />
+            <option value="$PROJECT_DIR$/operators" />
             <option value="$PROJECT_DIR$/shortandsweet" />
           </set>
         </option>

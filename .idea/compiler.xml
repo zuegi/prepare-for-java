@@ -6,6 +6,8 @@
       <module name="buildingBlocks_test" target="1.8" />
       <module name="createAndDestroyObjects_main" target="1.8" />
       <module name="createAndDestroyObjects_test" target="1.8" />
+      <module name="operators_main" target="1.8" />
+      <module name="operators_test" target="1.8" />
       <module name="shortandsweet_main" target="1.8" />
       <module name="shortandsweet_test" target="1.8" />
     </bytecodeTargetLevel>
