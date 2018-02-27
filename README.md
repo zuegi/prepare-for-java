@@ -15,16 +15,13 @@ Half in english, half in german
 * [Operators and Statements](operators/OperatorsAndStatements.md)
   * [Binäre arithmetische Operatoren](operators/BinaryArithemticOperators.md)
   * [unäre Operatoren](operators/UnaryOperators.md)
-<<<<<<< HEAD
   * [Zusätzliche binäre Operatorenbreak](operators/AdditionalBinaryOperators.md)
   * [Binäre arithmetische Operatoren](operators/BinaryArithemticOperators.md)
   * [unäre Operatoren](operators/UnaryOperators.md)
   * [Zusätzliche binäre Operatoren](operators/AdditionalBinaryOperators.md)
   * [Statements](operators/JavaStatements.md)
   * [Advanced Flow Control](operators/AdvancedFlowControl.md) 
-=======
   * [Zusätzliche binäre Operatoren](operators/AdditionalBinaryOperators.md)
->>>>>>> bd5804d5546402266e9e814347fc039f05b53cd2
 
 
 Create this project from scratch
