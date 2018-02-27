@@ -25,6 +25,9 @@ public class Primitives {
         int y = 10;
         int x = 2;
         int reply = x + y;
+        float z = 2;
+        float zz = 2.2f;
+        float zyz = 2f;
         return reply;
     }
 }

@@ -10,6 +10,7 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="module" module-name="shortandsweet_main" scope="TEST" />
   </component>
   <component name="TestModuleProperties" production-module="shortandsweet_main" />
 </module>
