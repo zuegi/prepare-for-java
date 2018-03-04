@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildingBlocks.iml" filepath="$PROJECT_DIR$/.idea/modules/buildingBlocks.iml" group="buildingBlocks" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildingBlocks/buildingBlocks_main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildingBlocks/buildingBlocks_main.iml" group="buildingBlocks" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildingBlocks/buildingBlocks_test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildingBlocks/buildingBlocks_test.iml" group="buildingBlocks" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coreapi.iml" filepath="$PROJECT_DIR$/.idea/modules/coreapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coreapi_main.iml" filepath="$PROJECT_DIR$/.idea/modules/coreapi_main.iml" group="coreapi" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coreapi_test.iml" filepath="$PROJECT_DIR$/.idea/modules/coreapi_test.iml" group="coreapi" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects.iml" group="createAndDestroyObjects" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_main.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_main.iml" group="createAndDestroyObjects" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_test.iml" filepath="$PROJECT_DIR$/.idea/modules/createAndDestroyObjects/createAndDestroyObjects_test.iml" group="createAndDestroyObjects" />

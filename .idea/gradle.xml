@@ -20,6 +20,16 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/coreapi" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/coreapi" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/shortandsweet" />
         <option name="gradleHome" value="C:/SEUJava/tools/gradle" />
         <option name="gradleJvm" value="JDK7" />

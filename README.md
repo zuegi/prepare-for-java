@@ -21,7 +21,8 @@ Half in english, half in german
   * [Zusätzliche binäre Operatoren](operators/AdditionalBinaryOperators.md)
   * [Statements](operators/JavaStatements.md)
   * [Advanced Flow Control](operators/AdvancedFlowControl.md) 
-
+  * [Zusätzliche binäre Operatoren](operators/AdditionalBinaryOperators.md)
+* [Core API](coreapi/CoreAPI.md)
 
 Create this project from scratch
 ==========================================
